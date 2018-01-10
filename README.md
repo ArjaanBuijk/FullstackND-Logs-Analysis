@@ -132,27 +132,29 @@ Query 3: The days when more than 1% of requests failed
 git clone https://github.com/ArjaanBuijk/FullstackND-Logs-Analysis
 ```
 
-2. Prepare the vagrant environment and PostgreSQL database
+2. Prepare the vagrant environment
 
- The code was created and tested within a vagrant virtual machine against a PostgreSQL database.
+    The code was created and tested within a vagrant virtual machine against a PostgreSQL database.
 
- The vagrant virtual machine is set up as described [here](https://classroom.udacity.com/nanodegrees/nd004/parts/8d3e23e1-9ab6-47eb-b4f3-d5dc7ef27bf0/modules/bc51d967-cb21-46f4-90ea-caf73439dc59/lessons/5475ecd6-cfdb-4418-85a2-f2583074c08d/concepts/14c72fe3-e3fe-4959-9c4b-467cf5b7c3a0). his will give you the PostgreSQL database called 'news' and support software needed for this project.
+    The vagrant virtual machine is set up as described [here](https://classroom.udacity.com/nanodegrees/nd004/parts/8d3e23e1-9ab6-47eb-b4f3-d5dc7ef27bf0/modules/bc51d967-cb21-46f4-90ea-caf73439dc59/lessons/5475ecd6-cfdb-4418-85a2-f2583074c08d/concepts/14c72fe3-e3fe-4959-9c4b-467cf5b7c3a0). his will give you the PostgreSQL database called 'news' and support software needed for this project.
 
- After installation of the vagrant VM, issue these commands:
+    After installation of the vagrant VM, issue these commands:
 ```bash
 vagrant up
 vagrant ssh
 cd /vagrant
 ```
- A file newsdata.sql is provided in newsdata.zip in the project repository, and must be copied into the vagrant folder, so it is accessible within the vagrant VM.
+3. Fill the PostgreSQL database
 
- The database is then filled with data using this command:
+    A file newsdata.sql is provided in newsdata.zip in the project repository, and must be copied into the vagrant folder, so it is accessible within the vagrant VM.
+
+    The database is then filled with data using this command:
 ```bash
 psql -d news -f newsdata.sql
 ```
 
 
-3. Run with python3 within the vagrant VM with database in same folder.
+4. Run with python3 within the vagrant VM with database in same folder.
 (Both VM & Database are provided by Udacity in the Fullstack ND course instructions)
 ```bash
 python logs_analysis.py
